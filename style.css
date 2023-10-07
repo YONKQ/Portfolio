@@ -156,12 +156,15 @@ section-2 .top {
 section-p {
   height: 100vh;
   width: 100%;
-  background-image: url(./assets/backgroundproject.svg);
+  background-image: url(./assets/backgrounps.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
 }
 
-section-p .container-p {
+/*section-p .container-p {
   align-items: center;
   justify-content: space-around;
   height: 5%;
@@ -174,32 +177,31 @@ section-p .container-p {
   top: 39px;
 }
 
-section-p .container-p nav {
+/*section-p .container-p nav { 
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 125px;
-}
+} */
 
-section-p .container-p nav a {
-  margin: 0 30px;
-  color: white;
-  font-weight: 220;
-  font-size: smaller;
-}
 section-p .container-p2 {
-  display: flex;
+  display: grid;
+
+  grid-template-areas:
+    "project-2 nextproject"
+    "skills skills";
   flex-direction: row;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
   margin-left: 170px;
-  height: 500px;
+  margin-right: 160px;
+  height: 400px;
 }
 
 .project-2 {
   width: 700px;
-  height: 390px;
+  height: 360px;
   flex-shrink: 0;
   border-radius: 45px;
   border: 0.5px solid #303138;
@@ -219,9 +221,70 @@ section-p .container-p2 {
   line-height: 22px;
   letter-spacing: 7px;
   margin-left: 10%;
+  margin-top: 1%;
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nextproject {
+  width: 300px;
+  height: 360px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: 0.2px solid #303138;
+  background: rgba(75, 72, 129, 0.12);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
+
+.nextproject p {
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 1px;
+  margin-left: 10%;
   margin-top: 3%;
   background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.skills {
+  width: 1000px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: 0.2px solid #303138;
+  background: rgba(75, 72, 129, 0.12);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+}
+
+.skills p {
+  font-family: Poppins;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 1px;
+  margin-left: 10%;
+  margin-top: 3%;
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#project-2 {
+  grid-area: project-2;
 }
