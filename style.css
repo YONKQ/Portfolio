@@ -124,12 +124,10 @@ section .container .middle-content .right img {
 }
 
 section-2 {
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   background: rgb(4, 6, 24);
-  background-image: url(assets/backgroundfinal.svg);
-  background-repeat: no-repeat;
-  background-position-y: bottom;
+  background-image: url(assets/backgrcontact.svg);
   display: flex;
   flex-direction: column;
   align-items: inherit;
@@ -185,22 +183,22 @@ section-p {
 } */
 
 section-p .container-p2 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  gap: 20px;
+  width: 1130px;
   display: grid;
-
-  grid-template-areas:
-    "project-2 nextproject"
-    "skills skills";
   flex-direction: row;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  margin-left: 170px;
-  margin-right: 160px;
-  height: 400px;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .project-2 {
-  width: 700px;
+  width: 667px;
   height: 360px;
   flex-shrink: 0;
   border-radius: 45px;
@@ -229,7 +227,7 @@ section-p .container-p2 {
 }
 
 .nextproject {
-  width: 300px;
+  width: 405px;
   height: 360px;
   flex-shrink: 0;
   border-radius: 30px;
@@ -258,16 +256,17 @@ section-p .container-p2 {
 }
 
 .skills {
-  width: 1000px;
-  height: 200px;
+  grid-column: 3/1;
+  width: 1092px;
+  height: 100px;
   flex-shrink: 0;
-  border-radius: 30px;
+  border-radius: 15px;
   border: 0.2px solid #303138;
   background: rgba(75, 72, 129, 0.12);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   background: linear-gradient(
     rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.05) 100%
+    rgba(255, 255, 255, 0.05) 100% grid-column: 1 / -1;
   );
 }
 
@@ -278,7 +277,7 @@ section-p .container-p2 {
   font-weight: 400;
   line-height: 22px;
   letter-spacing: 1px;
-  margin-left: 10%;
+  margin-left: 3%;
   margin-top: 3%;
   background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
   background-clip: text;
